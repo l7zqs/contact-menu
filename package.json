@@ -1,0 +1,42 @@
+{
+  "name": "contact-fab",
+  "version": "1.0.0",
+  "description": "A lightweight, dependency-free animated contact floating action button for websites.",
+  "main": "dist/fab.js",
+  "module": "src/index.js",
+  "unpkg": "dist/fab.min.js",
+  "jsdelivr": "dist/fab.min.js",
+  "type": "module",
+  "files": [
+    "dist",
+    "src",
+    "fab.min.js"
+  ],
+  "scripts": {
+    "dev": "node scripts/dev-server.mjs",
+    "build": "node scripts/build.mjs",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "contact-fab",
+    "floating-action-button",
+    "fab",
+    "social-links",
+    "javascript-library",
+    "vanilla-js",
+    "widget"
+  ],
+  "author": "l7zqs",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/l7zqs/contact-fab.git"
+  },
+  "homepage": "https://github.com/l7zqs/contact-fab#readme",
+  "bugs": {
+    "url": "https://github.com/l7zqs/contact-fab/issues"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0"
+  }
+}
