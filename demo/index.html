@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sena Voss — Frontend Engineer</title>
+<style>
+  :root{
+    --paper:#F1F0EC; --ink:#1B1C19; --ink-soft:#54554E;
+    --line:#D8D6CE; --accent:#2B4636; --accent-soft:#DCE6DE;
+    --serif:Georgia,"Iowan Old Style","Palatino Linotype",ui-serif,serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,Roboto,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+  .wrap{max-width:760px;margin:0 auto;padding:0 28px}
+  a{color:inherit}
+  section{padding:88px 0;border-bottom:1px solid var(--line)}
+  section:last-of-type{border-bottom:none}
+
+  header.hero{padding:110px 0 96px}
+  .kicker{font-family:var(--serif);font-style:italic;color:var(--ink-soft);font-size:19px;margin:0 0 18px}
+  h1{font-family:var(--serif);font-size:clamp(40px,7vw,64px);line-height:1.06;letter-spacing:-.01em;margin:0 0 28px;max-width:14ch}
+  .lede{font-size:19px;color:var(--ink-soft);max-width:52ch;margin:0 0 36px}
+  .hero-meta{display:flex;gap:28px;flex-wrap:wrap;font-size:14px;color:var(--ink-soft)}
+  .hero-meta strong{color:var(--ink);font-weight:600}
+
+  h2{font-family:var(--serif);font-size:30px;margin:0 0 34px;letter-spacing:-.01em}
+  p{margin:0 0 18px;max-width:62ch}
+
+  .projects{display:flex;flex-direction:column;gap:0}
+  .project{display:grid;grid-template-columns:120px 1fr;gap:24px;padding:26px 0;border-top:1px solid var(--line)}
+  .project:first-of-type{border-top:none}
+  .project time{font-size:13px;color:var(--ink-soft);padding-top:3px}
+  .project h3{margin:0 0 8px;font-size:19px;font-weight:600}
+  .project p{margin:0;color:var(--ink-soft);font-size:15px;max-width:54ch}
+  .project .tags{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
+  .project .tags span{font-size:12px;color:var(--accent);background:var(--accent-soft);padding:3px 10px;border-radius:100px}
+
+  .skills{columns:2;gap:40px}
+  .skill-group{break-inside:avoid;margin-bottom:28px}
+  .skill-group h4{margin:0 0 10px;font-size:14px;font-weight:600;color:var(--ink-soft)}
+  .skill-group ul{margin:0;padding:0;list-style:none}
+  .skill-group li{padding:5px 0;border-top:1px solid var(--line);font-size:15px}
+  .skill-group li:first-child{border-top:none}
+
+  .contact-card{background:var(--accent);color:#F1F0EC;border-radius:18px;padding:48px}
+  .contact-card h2{color:#fff}
+  .contact-card p{color:#D9E3DB;max-width:48ch}
+  .contact-card a.email{display:inline-block;margin-top:8px;font-family:var(--serif);font-size:22px;border-bottom:1px solid rgba(255,255,255,.4)}
+
+  .try-api{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+  .try-api button{all:unset;cursor:pointer;font:600 13px/1 var(--sans);padding:11px 18px;border-radius:100px;background:#fff;color:var(--ink);border:1px solid var(--line)}
+  .try-api button:hover{background:var(--accent-soft)}
+
+  footer{padding:40px 0 90px;font-size:13px;color:var(--ink-soft)}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="hero">
+    <p class="kicker">Frontend engineer, currently building small tools that don't need a build step</p>
+    <h1>I make interfaces feel like they were made by hand.</h1>
+    <p class="lede">Eight years writing the layer between people and their screens — most recently a floating action button that took far longer to get right than it has any business taking.</p>
+    <div class="hero-meta">
+      <span><strong>Based in</strong> Lisbon, Portugal</span>
+      <span><strong>Available</strong> for contract work, Q1 2027</span>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>I spend most of my time in the gap between design and implementation — the part where a mockup has to survive real content, real screen sizes, and real people clicking things too fast. Lately that's meant a lot of work on small, dependency-free components that a website can drop in without inheriting someone else's build pipeline.</p>
+    <p>Before going independent, I led the design-systems team at a logistics startup, and before that spent three years making maps render faster than they had any right to.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Selected work</h2>
+    <div class="projects">
+      <article class="project">
+        <time>2026</time>
+        <div>
+          <h3>Contact FAB</h3>
+          <p>The floating contact menu demonstrated on this page — vanilla JavaScript, no build step required to use it, under 16&nbsp;KB minified.</p>
+          <div class="tags"><span>JavaScript</span><span>CSS animation</span><span>a11y</span></div>
+        </div>
+      </article>
+      <article class="project">
+        <time>2025</time>
+        <div>
+          <h3>Waypoint</h3>
+          <p>A tile-rendering layer for a logistics dashboard, cutting first-paint time on route maps from 4.1s to 600ms.</p>
+          <div class="tags"><span>WebGL</span><span>Performance</span></div>
+        </div>
+      </article>
+      <article class="project">
+        <time>2023</time>
+        <div>
+          <h3>Fieldnotes</h3>
+          <p>An offline-first note editor for researchers working without reliable connectivity, syncing opportunistically over WebRTC.</p>
+          <div class="tags"><span>IndexedDB</span><span>WebRTC</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill-group">
+        <h4>Languages</h4>
+        <ul><li>JavaScript / TypeScript</li><li>CSS &amp; animation</li><li>Python</li><li>SQL</li></ul>
+      </div>
+      <div class="skill-group">
+        <h4>Tools</h4>
+        <ul><li>Vite &amp; esbuild</li><li>Figma</li><li>Playwright</li><li>Git</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="try-it">
+    <h2>Try the API</h2>
+    <p>This page loads the local build (<code>../dist/fab.js</code>) with the dark theme and the four default contacts. The buttons below call the library's public methods directly.</p>
+    <div class="try-api">
+      <button id="btn-open">contact.open()</button>
+      <button id="btn-close">contact.close()</button>
+      <button id="btn-toggle">contact.toggle()</button>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact-card">
+      <h2>Get in touch</h2>
+      <p>Or just use the floating button in the corner — that's the whole point of it.</p>
+      <a class="email" href="mailto:hello@example.com">hello@example.com</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">© 2026 Sena Voss. This page is placeholder content for the Contact FAB demo.</div>
+  </footer>
+</div>
+
+<script src="../dist/fab.js"></script>
+<script>
+  const contact = new fab({
+    theme: "dark",
+    tooltip: true,
+    contacts: [
+      { name: "LinkedIn", url: "https://linkedin.com/", icon: "linkedin" },
+      { name: "GitHub", url: "https://github.com/l7zqs", icon: "github" },
+      { name: "Facebook", url: "https://facebook.com/", icon: "facebook" },
+      { name: "WhatsApp", url: "https://wa.me/", icon: "whatsapp" }
+    ],
+    onOpen: () => console.log("Contact menu opened"),
+    onClose: () => console.log("Contact menu closed"),
+    onClick: (c) => console.log("Clicked:", c.name)
+  });
+
+  document.getElementById("btn-open").addEventListener("click", () => contact.open());
+  document.getElementById("btn-close").addEventListener("click", () => contact.close());
+  document.getElementById("btn-toggle").addEventListener("click", () => contact.toggle());
+</script>
+</body>
+</html>
