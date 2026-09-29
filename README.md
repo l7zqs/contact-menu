@@ -1,11 +1,11 @@
-# Contact FAB
+# Contact MENU
 
 A lightweight, dependency-free floating contact menu for websites.
 
 No React, no jQuery, no icon library, no external CSS. Drop in one script tag and you have an animated floating action button with your social and contact links.
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/l7zqs/contact-fab@v1.0.0/fab.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/l7zqs/contact-menu@v1.0.0/fab.min.js"></script>
 <script>
   const contact = new fab();
 </script>
@@ -30,13 +30,13 @@ No React, no jQuery, no icon library, no external CSS. Drop in one script tag an
 ### Option 1 — CDN (recommended)
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/l7zqs/contact-fab@v1.0.0/fab.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/l7zqs/contact-menu@v1.0.0/fab.min.js"></script>
 ```
 
 Pin to a version tag (`@v1.0.0`) for production so an update to the repository can never change what your site loads. To always get the latest commit on `main` instead:
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/l7zqs/contact-fab@main/dist/fab.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/l7zqs/contact-menu@main/dist/fab.min.js"></script>
 ```
 
 ### Option 2 — Self-hosted
@@ -46,7 +46,7 @@ Download `dist/fab.min.js` from a release and serve it yourself.
 ## Usage
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/l7zqs/contact-fab@v1.0.0/fab.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/l7zqs/contact-menu@v1.0.0/fab.min.js"></script>
 <script>
   new fab();
 </script>
@@ -122,7 +122,7 @@ Calling `new fab()` again without an `id` replaces the existing default instance
 ## Local development
 
 ```bash
-git clone https://github.com/l7zqs/contact-fab.git
+git clone https://github.com/l7zqs/contact-menu.git
 cd contact-fab
 npm install
 npm run dev     # serves demo/index.html against the local build
@@ -130,26 +130,6 @@ npm run build   # writes dist/fab.js, dist/fab.min.js, and copies fab.min.js to 
 ```
 
 The demo lives at `demo/index.html` and loads `../dist/fab.js` directly, so `npm run build` (or `npm run dev`, which serves the repo root) is all you need to see changes.
-
-## Releasing a new version
-
-```bash
-git add .
-git commit -m "Release v1.0.1"
-npm run build          # regenerates dist/ and the root-level fab.min.js
-git add fab.min.js dist
-git commit -m "Build v1.0.1"
-git tag v1.0.1
-git push origin main --tags
-```
-
-After the tag is pushed, jsDelivr picks it up automatically (allow a few minutes, or purge the jsDelivr cache):
-
-```
-https://cdn.jsdelivr.net/gh/l7zqs/contact-fab@v1.0.1/fab.min.js
-```
-
-Follow [semantic versioning](https://semver.org/): `MAJOR.MINOR.PATCH` — patch for bug fixes, minor for backward-compatible features, major for breaking changes to the config shape or public API.
 
 ## Browser support
 
